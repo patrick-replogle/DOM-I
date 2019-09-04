@@ -38,6 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+//Header and nav
 let header = document.querySelector('header');
 header.style.display = 'flex';
 
@@ -59,23 +60,27 @@ let newA2 = document.createElement('a');
 newA2.textContent = 'More';
 nav.appendChild(newA2)
 
+//change color of nav a
 let color = document.querySelectorAll('a')
 color.forEach((element) => element.style.color = 'green');
 
-//let lineBreak = document.createElement('br');
+//CTA content
 
 let cta = document.querySelector('.cta')
 let ctaText = document.querySelector('.cta-text')
 ctaText.style.display = 'flex';
 ctaText.style.flexDirection = 'column';
 let h1 = document.querySelector('.cta-text h1');
-h1.textContent = 'DOM IS AWESOME';
+h1.textContent = 'DOM \r\n IS \r\n AWESOME';
+h1.style.whiteSpace = 'pre';
 let button = document.querySelector('button');
 button.textContent = 'Get Started';
 button.style.borderRadius = '5px';
 let circleImage = document.querySelector('.cta #cta-img');
 circleImage.src = 'img/header-img.png';
 circleImage.alt = 'Circle code logo thing';
+
+//Main content
 
 let mainContent = document.querySelector('.main-content');
 mainContent.style.display = 'flex';
@@ -110,16 +115,20 @@ let middleImg = document.querySelector('#middle-img');
 middleImg.src = 'img/mid-page-accent.jpg';
 middleImg.alt = 'code stuffs';
 
+//contact section
+
 let contact = document.querySelector('.contact');
 contact.style.display = 'flex';
 contact.style.flexDirection = 'column';
 contact.style.justifyContent = 'flex-start';
+contact.style.marginBottom = '-60px';
 let contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = 'CONTACT';
-let contactP = document.querySelectorAll('.contact p');
-contactP[0].textContent = '123 Way 456 Street \n Somewhere, USA';
-contactP[1].textContent = '1 (888) 888-8888';
-contactP[2].textContent = 'sales@greatidea.io';
+let contactP = document.querySelector('.contact p');
+contactP.textContent = '123 Way 456\r\nStreet Somewhere, USA\r\n \r\n1 (888) 888-8888\r\n \r\nsales@greatidea.io'
+contactP.style.whiteSpace = 'pre';
+
+//footer 
 
 let footer = document.querySelector('footer');
 footer.style.display = 'flex';
