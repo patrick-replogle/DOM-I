@@ -68,18 +68,19 @@ nav.prepend(newA2);
 let cta = document.querySelector('.cta')
 let ctaText = document.querySelector('.cta-text')
 let h1 = document.querySelector('.cta-text h1');
-h1.textContent = 'DOM \r\n IS \r\n AWESOME';
+h1.textContent = 'DOM \n IS \n AWESOME';
 h1.style.whiteSpace = 'pre';
 let button = document.querySelector('button');
 button.style.borderRadius = '5px';
 button.textContent = siteContent["cta"]["button"];
 let circleImg = document.getElementById("cta-img");
- circleImg.setAttribute('src', siteContent['cta']['img-src']);
+circleImg.setAttribute('src', siteContent['cta']['img-src']);
 
- 
+//middle img
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+//all h4 and p tags for main-content
 let allH4 = document.querySelectorAll('h4');
 allH4[0].textContent = siteContent['main-content']["features-h4"];
 allH4[1].textContent = siteContent['main-content']["about-h4"];
@@ -98,5 +99,5 @@ allP[8].textContent = siteContent['footer']["copyright" ];
 
 //contact info to get line breaks
 let contactP = document.querySelector('.contact p');
-contactP.textContent = '123 Way 456\r\nStreet Somewhere, USA\r\n \r\n1 (888) 888-8888\r\n \r\nsales@greatidea.io'
+contactP.textContent = '123 Way 456\nStreet Somewhere, USA\n \n1 (888) 888-8888\n \nsales@greatidea.io'
 contactP.style.whiteSpace = 'pre';
