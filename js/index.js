@@ -38,5 +38,66 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+//Header and nav
+
+//nav section
+let allA = document.querySelectorAll('a');
+allA[0].textContent = siteContent['nav']["nav-item-1"];
+allA[1].textContent = siteContent['nav']["nav-item-2"];
+allA[2].textContent = siteContent['nav']["nav-item-3"];
+allA[3].textContent = siteContent['nav']["nav-item-4"];
+allA[4].textContent = siteContent['nav']["nav-item-5"];
+allA[5].textContent = siteContent['nav']["nav-item-6"];
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+//color function
+let aColor = allA.forEach((element) => element.style.color = 'green');
+//add a tags
+let nav = document.querySelector('nav');
+let newA1 = document.createElement('a');
+newA1.textContent = "Stuff";
+newA1.style.color = 'green';
+nav.appendChild(newA1);
+
+let newA2 = document.createElement('a');
+newA2.textContent = "More";
+newA2.style.color = 'green';
+nav.prepend(newA2);
+
+//cta section and line breaks hard coded
+let cta = document.querySelector('.cta')
+let ctaText = document.querySelector('.cta-text')
+let h1 = document.querySelector('.cta-text h1');
+h1.textContent = 'DOM \n IS \n AWESOME';
+h1.style.whiteSpace = 'pre';
+let button = document.querySelector('button');
+button.style.borderRadius = '5px';
+button.textContent = siteContent["cta"]["button"];
+let circleImg = document.getElementById("cta-img");
+circleImg.setAttribute('src', siteContent['cta']['img-src']);
+
+//middle img
+let middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//all h4 and p tags for main-content
+let allH4 = document.querySelectorAll('h4');
+allH4[0].textContent = siteContent['main-content']["features-h4"];
+allH4[1].textContent = siteContent['main-content']["about-h4"];
+allH4[2].textContent = siteContent['main-content']["services-h4"];
+allH4[3].textContent = siteContent['main-content']["product-h4"];
+allH4[4].textContent = siteContent['main-content']["vision-h4"];
+allH4[5].textContent = siteContent['contact']["contact-h4"];
+
+let allP = document.querySelectorAll('p');
+allP[0].textContent = siteContent['main-content']["features-content"];
+allP[1].textContent = siteContent['main-content']["about-content"];
+allP[2].textContent = siteContent['main-content']["services-content"];
+allP[3].textContent = siteContent['main-content']["product-content"];
+allP[4].textContent = siteContent['main-content']["vision-content"];
+allP[8].textContent = siteContent['footer']["copyright" ];
+
+//contact info to get line breaks
+let contactP = document.querySelector('.contact p');
+contactP.textContent = '123 Way 456\nStreet Somewhere, USA\n \n1 (888) 888-8888\n \nsales@greatidea.io'
+contactP.style.whiteSpace = 'pre';
